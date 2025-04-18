@@ -1,0 +1,10 @@
+C:\Users\guilh\Documents\PROJETOS\MaximoSync\MaximoSync\bin\Debug\MaximoSync.exe.config
+C:\Users\guilh\Documents\PROJETOS\MaximoSync\MaximoSync\bin\Debug\MaximoSync.exe
+C:\Users\guilh\Documents\PROJETOS\MaximoSync\MaximoSync\bin\Debug\MaximoSync.pdb
+C:\Users\guilh\Documents\PROJETOS\MaximoSync\MaximoSync\obj\Debug\MaximoSync.csproj.AssemblyReference.cache
+C:\Users\guilh\Documents\PROJETOS\MaximoSync\MaximoSync\obj\Debug\MaximoSync.Form1.resources
+C:\Users\guilh\Documents\PROJETOS\MaximoSync\MaximoSync\obj\Debug\MaximoSync.Properties.Resources.resources
+C:\Users\guilh\Documents\PROJETOS\MaximoSync\MaximoSync\obj\Debug\MaximoSync.csproj.GenerateResource.cache
+C:\Users\guilh\Documents\PROJETOS\MaximoSync\MaximoSync\obj\Debug\MaximoSync.csproj.CoreCompileInputs.cache
+C:\Users\guilh\Documents\PROJETOS\MaximoSync\MaximoSync\obj\Debug\MaximoSync.exe
+C:\Users\guilh\Documents\PROJETOS\MaximoSync\MaximoSync\obj\Debug\MaximoSync.pdb
