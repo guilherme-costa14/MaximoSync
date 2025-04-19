@@ -71,6 +71,7 @@
             this.txtTempo.Name = "txtTempo";
             this.txtTempo.Size = new System.Drawing.Size(158, 24);
             this.txtTempo.TabIndex = 2;
+            this.txtTempo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTempo_KeyPress);
             // 
             // txtUrlLink
             // 

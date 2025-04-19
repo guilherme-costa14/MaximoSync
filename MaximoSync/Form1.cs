@@ -33,28 +33,25 @@ namespace MaximoSync
             formulario.UrlLink = txtUrlLink.Text;
             formulario.TempoMinutos = Convert.ToInt32(txtTempo.Text);
 
-            if (txtUrlLink.Text == "")
+            try
             {
-                MessageBox.Show("Preencher o campo URL", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                txtUrlLink.Focus();
-            }
-            else
-            {
-                try
+                using (StreamWriter sw = new StreamWriter(@"C:\Users\guilh\Documents\PROJETOS\MaximoSync\MaximoSync\REGISTROS\registro.json"))
                 {
-                    using (StreamWriter sw = new StreamWriter(@"C:\Users\guilh\Documents\PROJETOS\MaximoSync\MaximoSync\REGISTROS\registro.json"))
-                    {
-                        sw.WriteLine(formulario.JsonSerializar(formulario));
-                    }
+                    sw.WriteLine(formulario.JsonSerializar(formulario));
+                }
 
-                    MessageBox.Show("Registro salvo com sucesso!", "Confirmação", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Falha: " + ex.Message);
-                }
-                //MessageBox.Show(formulario.JsonSerializar(formulario)); - mostra como o arquivo vai ser salvo no formato json
+                MessageBox.Show("Registro salvo com sucesso!", "Confirmação", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Falha: " + ex.Message);
+            }
+            //MessageBox.Show(formulario.JsonSerializar(formulario)); - mostra como o arquivo vai ser salvo no formato json
+        }
+
+        private void txtTempo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Program.NumeroInteiro(e);
         }
     }
 }
