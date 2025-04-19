@@ -8,3 +8,6 @@ C:\Users\guilh\Documents\PROJETOS\MaximoSync\MaximoSync\obj\Debug\MaximoSync.csp
 C:\Users\guilh\Documents\PROJETOS\MaximoSync\MaximoSync\obj\Debug\MaximoSync.csproj.CoreCompileInputs.cache
 C:\Users\guilh\Documents\PROJETOS\MaximoSync\MaximoSync\obj\Debug\MaximoSync.exe
 C:\Users\guilh\Documents\PROJETOS\MaximoSync\MaximoSync\obj\Debug\MaximoSync.pdb
+C:\Users\guilh\Documents\PROJETOS\MaximoSync\MaximoSync\bin\Debug\Newtonsoft.Json.dll
+C:\Users\guilh\Documents\PROJETOS\MaximoSync\MaximoSync\bin\Debug\Newtonsoft.Json.xml
+C:\Users\guilh\Documents\PROJETOS\MaximoSync\MaximoSync\obj\Debug\MaximoSync.csproj.Up2Date

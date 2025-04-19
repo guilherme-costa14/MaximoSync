@@ -28,14 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.Label tempoMinutosLabel;
             System.Windows.Forms.Label urlLinkLabel;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.txtTempo = new System.Windows.Forms.TextBox();
             this.txtUrlLink = new System.Windows.Forms.TextBox();
             this.btnSincronizar = new System.Windows.Forms.Button();
+            this.trayIconOpcoes = new System.Windows.Forms.NotifyIcon(this.components);
+            this.cmsOpcoes = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.tsmiDefinicoes = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiSincronizar = new System.Windows.Forms.ToolStripMenuItem();
             tempoMinutosLabel = new System.Windows.Forms.Label();
             urlLinkLabel = new System.Windows.Forms.Label();
+            this.cmsOpcoes.SuspendLayout();
             this.SuspendLayout();
             // 
             // tempoMinutosLabel
@@ -48,14 +54,6 @@
             tempoMinutosLabel.TabIndex = 1;
             tempoMinutosLabel.Text = "Tempo (min):";
             // 
-            // txtTempo
-            // 
-            this.txtTempo.Font = new System.Drawing.Font("Microsoft JhengHei UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTempo.Location = new System.Drawing.Point(130, 66);
-            this.txtTempo.Name = "txtTempo";
-            this.txtTempo.Size = new System.Drawing.Size(158, 24);
-            this.txtTempo.TabIndex = 2;
-            // 
             // urlLinkLabel
             // 
             urlLinkLabel.AutoSize = true;
@@ -65,6 +63,14 @@
             urlLinkLabel.Size = new System.Drawing.Size(36, 17);
             urlLinkLabel.TabIndex = 3;
             urlLinkLabel.Text = "URL:";
+            // 
+            // txtTempo
+            // 
+            this.txtTempo.Font = new System.Drawing.Font("Microsoft JhengHei UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTempo.Location = new System.Drawing.Point(130, 66);
+            this.txtTempo.Name = "txtTempo";
+            this.txtTempo.Size = new System.Drawing.Size(158, 24);
+            this.txtTempo.TabIndex = 2;
             // 
             // txtUrlLink
             // 
@@ -84,6 +90,33 @@
             this.btnSincronizar.Text = "Sincronizar";
             this.btnSincronizar.UseVisualStyleBackColor = true;
             // 
+            // trayIconOpcoes
+            // 
+            this.trayIconOpcoes.ContextMenuStrip = this.cmsOpcoes;
+            this.trayIconOpcoes.Icon = ((System.Drawing.Icon)(resources.GetObject("trayIconOpcoes.Icon")));
+            this.trayIconOpcoes.Text = "MaximoSync";
+            this.trayIconOpcoes.Visible = true;
+            // 
+            // cmsOpcoes
+            // 
+            this.cmsOpcoes.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsmiDefinicoes,
+            this.tsmiSincronizar});
+            this.cmsOpcoes.Name = "cmsOpcoes";
+            this.cmsOpcoes.Size = new System.Drawing.Size(133, 48);
+            // 
+            // tsmiDefinicoes
+            // 
+            this.tsmiDefinicoes.Name = "tsmiDefinicoes";
+            this.tsmiDefinicoes.Size = new System.Drawing.Size(132, 22);
+            this.tsmiDefinicoes.Text = "Definições";
+            // 
+            // tsmiSincronizar
+            // 
+            this.tsmiSincronizar.Name = "tsmiSincronizar";
+            this.tsmiSincronizar.Size = new System.Drawing.Size(132, 22);
+            this.tsmiSincronizar.Text = "Sincronizar";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -99,6 +132,7 @@
             this.ShowInTaskbar = false;
             this.Text = "MaximoSync";
             this.WindowState = System.Windows.Forms.FormWindowState.Minimized;
+            this.cmsOpcoes.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -109,6 +143,10 @@
         private System.Windows.Forms.TextBox txtTempo;
         private System.Windows.Forms.TextBox txtUrlLink;
         private System.Windows.Forms.Button btnSincronizar;
+        private System.Windows.Forms.NotifyIcon trayIconOpcoes;
+        private System.Windows.Forms.ContextMenuStrip cmsOpcoes;
+        private System.Windows.Forms.ToolStripMenuItem tsmiDefinicoes;
+        private System.Windows.Forms.ToolStripMenuItem tsmiSincronizar;
     }
 }
 
