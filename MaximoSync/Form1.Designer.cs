@@ -89,6 +89,7 @@
             this.btnSincronizar.TabIndex = 5;
             this.btnSincronizar.Text = "Sincronizar";
             this.btnSincronizar.UseVisualStyleBackColor = true;
+            this.btnSincronizar.Click += new System.EventHandler(this.btnSincronizar_Click);
             // 
             // trayIconOpcoes
             // 
@@ -103,7 +104,7 @@
             this.tsmiDefinicoes,
             this.tsmiSincronizar});
             this.cmsOpcoes.Name = "cmsOpcoes";
-            this.cmsOpcoes.Size = new System.Drawing.Size(181, 70);
+            this.cmsOpcoes.Size = new System.Drawing.Size(133, 48);
             this.cmsOpcoes.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.cmsOpcoes_ItemClicked);
             // 
             // tsmiDefinicoes
