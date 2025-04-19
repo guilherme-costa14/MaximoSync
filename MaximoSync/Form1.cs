@@ -16,5 +16,13 @@ namespace MaximoSync
         {
             InitializeComponent();
         }
+
+        private void cmsOpcoes_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+            if(e.ClickedItem.Name.ToString() == "tsmiDefinicoes")
+            {
+                this.WindowState = FormWindowState.Normal;
+            }
+        }
     }
 }

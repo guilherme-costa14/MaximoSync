@@ -103,18 +103,19 @@
             this.tsmiDefinicoes,
             this.tsmiSincronizar});
             this.cmsOpcoes.Name = "cmsOpcoes";
-            this.cmsOpcoes.Size = new System.Drawing.Size(133, 48);
+            this.cmsOpcoes.Size = new System.Drawing.Size(181, 70);
+            this.cmsOpcoes.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.cmsOpcoes_ItemClicked);
             // 
             // tsmiDefinicoes
             // 
             this.tsmiDefinicoes.Name = "tsmiDefinicoes";
-            this.tsmiDefinicoes.Size = new System.Drawing.Size(132, 22);
+            this.tsmiDefinicoes.Size = new System.Drawing.Size(180, 22);
             this.tsmiDefinicoes.Text = "Definições";
             // 
             // tsmiSincronizar
             // 
             this.tsmiSincronizar.Name = "tsmiSincronizar";
-            this.tsmiSincronizar.Size = new System.Drawing.Size(132, 22);
+            this.tsmiSincronizar.Size = new System.Drawing.Size(180, 22);
             this.tsmiSincronizar.Text = "Sincronizar";
             // 
             // Form1
