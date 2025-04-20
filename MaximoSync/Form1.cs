@@ -43,7 +43,7 @@ namespace MaximoSync
             else
             {
                 var formulario = new Formulario();
-                formulario.UrlLink = txtUrlLink.Text;
+                formulario.UrlLink = txtUrlLink.Text.Trim();
                 formulario.TempoMinutos = Convert.ToInt32(txtTempo.Text);
 
                 try
