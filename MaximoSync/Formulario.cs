@@ -10,7 +10,7 @@ namespace MaximoSync
     public class Formulario
     {
         public string UrlLink { get; set; }
-        public decimal TempoMinutos { get; set; }
+        public int TempoMinutos { get; set; }
 
         public string JsonSerializar(Formulario formulario)
         {
