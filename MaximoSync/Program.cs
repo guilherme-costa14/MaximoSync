@@ -21,6 +21,7 @@ namespace MaximoSync
 
         public static void NumeroInteiro(KeyPressEventArgs e)
         {
+            //Verifica se é digíto e abilita o backspace, se tiver algo digitado no campo.
             if(!char.IsDigit(e.KeyChar) && e.KeyChar != 8)
                 e.Handled = true;
         }

@@ -20,6 +20,7 @@ namespace MaximoSync
 
         private void cmsOpcoes_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
         {
+            //Abrir o formulário em tamanho normal, quando clicado em definições.
             if(e.ClickedItem.Name.ToString() == "tsmiDefinicoes")
             {
                 this.WindowState = FormWindowState.Normal;
@@ -29,12 +30,14 @@ namespace MaximoSync
 
         private void btnSincronizar_Click(object sender, EventArgs e)
         {
+            //Verifica se o campo é nulo ou tem espaços em branco se, sim, exibe uma mensagem.
             if (string.IsNullOrWhiteSpace(txtUrlLink.Text))
             {
                 MessageBox.Show("Preencher o campo URL", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 txtUrlLink.Clear();
                 txtUrlLink.Focus();
             }
+            //Verifica se o campo está vazio se, sim, exibe uma mensagem.
             else if (txtTempo.Text == "")
             {
                 MessageBox.Show("Preencher o campo Tempo", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -42,12 +45,14 @@ namespace MaximoSync
             }
             else
             {
+                //Inicializa os métodos dentro de uma variável local, e armazena as informações dos campos dentro dos objetos da classe Formulario();
                 var formulario = new Formulario();
                 formulario.UrlLink = txtUrlLink.Text.Trim();
                 formulario.TempoMinutos = Convert.ToInt32(txtTempo.Text);
 
                 try
                 {
+                    //Converte os dados para o formato .json e salva no caminho específicado.
                     using (StreamWriter sw = new StreamWriter(@"C:\Users\guilh\Documents\PROJETOS\MaximoSync\MaximoSync\REGISTROS\registro.json"))
                     {
                         sw.WriteLine(formulario.JsonSerializar(formulario));
@@ -55,6 +60,7 @@ namespace MaximoSync
 
                     MessageBox.Show("Registro salvo com sucesso!", "Confirmação", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
+                //Exibe uma mensagem de erro, caso de errado.
                 catch (Exception ex)
                 {
                     MessageBox.Show("Falha: " + ex.Message);
@@ -65,6 +71,7 @@ namespace MaximoSync
 
         private void txtTempo_KeyPress(object sender, KeyPressEventArgs e)
         {
+            //Função para permitir apenas números no campo.
             Program.NumeroInteiro(e);
         }
     }
